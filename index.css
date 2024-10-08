@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+}
+
+.resume-wrapper {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+        "nav nav nav"
+        "about about img"
+        "papers articles articles"
+        "papers awards awards"
+        "papers hobbies hobbies"
+        "quotes quotes quotes";
+    gap: 10px;
+}
+
+header {
+    grid-area: nav;
+    background-color: #F2766B;
+    padding: 10px;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.about-me {
+    grid-area: about;
+    padding: 20px;
+    background-color: #F2D4C9
+}
+
+.profile-section {
+    grid-area: img;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #F2D4C9
+}
+
+.profile-image {
+    height: 150px;
+    width: 150px;
+}
+
+.name-designation {
+    margin-top: 10px;
+}
+
+.awards {
+    grid-area: awards;
+    padding: 20px;
+    background-color: #F2D4C9
+}
+
+.award-container {
+    text-align: center;
+}
+
+.award {
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.award p {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.award-icon {
+    display: block;
+    margin: 0 auto 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.papers {
+    grid-area: papers;
+    padding: 20px;
+    background-color: #F2D4C9
+}
+
+.papers-container {
+    text-align: center;
+}
+
+.paper {
+    display: inline-block;
+    width: 100%;
+    margin: 15px;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.paper p {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.quotes {
+    grid-area: quotes;
+    padding: 20px;
+    background-color: #F2766B;
+    text-align: center;
+}
+
+.quotes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+}
+
+.quote {
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quotes-container .quote p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.articles {
+    grid-area: articles;
+    padding: 20px;
+    background-color: #F2D4C9
+}
+
+.articles-container {
+    text-align: center;
+}
+
+.articles p {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.articles h3 {
+    padding: 15px;
+}
+
+footer {
+    grid-area: hobbies;
+    background-color: #F2D4C9;
+    text-align: left;
+    padding: 20px;
+}
+
+#about:target, #papers:target, #articles:target, #awards:target, #hobbies:target, #quotes:target{
+    background-color: #D9998B;
+}
+
+footer h2,
+#awards,
+#papers,
+#quotes,
+#articles,
+#about {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 500px) {
+    .resume-wrapper {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    nav ul {
+        display: none;
+        text-align: left;
+        background-color: #add8e6;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        text-align: right;
+        margin-right: 10px;
+    }
+
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .quotes-container {
+        grid-template-columns: 1fr;
+    }
+}
